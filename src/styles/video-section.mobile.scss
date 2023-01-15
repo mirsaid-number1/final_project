@@ -1,4 +1,5 @@
 @import './kit/variables';
+@import './kit/mixins';
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .blocks-wrapper {
@@ -15,37 +16,21 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      &__header {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 64px;
-        color: white;
-        text-align: center;
+      &__header--video {
+        @include header-style($white-color);
       }
 
       &__button--play {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100px;
-        height: 100px;
-        background-color: $light-blue;
-        border-radius: 50%;
-        border: none;
-        color: $white-color;
         font-size: 40px;
+        @include buttons(50%, 100px, 100px);
+        @include video-button-animation();
       }
 
-      &__desc {
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 32px;
-        color: $white-color;
-        text-align: center;
+      &__desc--video {
+        @include description-style($white-color);
         width: 400px;
       }
     }
