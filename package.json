@@ -1,0 +1,40 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node-sass -w src/styles/style.scss src/style.css",
+    "compiler": "node-sass src/styles/style.scss src/style.css",
+    "prefixer": "postcss src/style.css --use postcss-import --use autoprefixer --no-map --output src/style.css",
+    "cleaner": "purgecss --css src/style.css --content src/index.html --output src/style.css",
+    "minimizer": "postcss src/style.css --use cssnano --no-map --output src/style.css",
+    "prod": "npm-run-all compiler prefixer cleaner minimizer",
+    "lint": "stylelint **/*.scss",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirsaid-number1/final_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirsaid-number1/final_project/issues"
+  },
+  "homepage": "https://github.com/mirsaid-number1/final_project#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0"
+  }
+}

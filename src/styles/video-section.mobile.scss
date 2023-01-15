@@ -1,0 +1,53 @@
+@import './kit/variables';
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .blocks-wrapper {
+    &__article-video {
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      background-color: grey;
+      background-image: url('./assets/second-bg-img.jpg');
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &__header {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        color: white;
+        text-align: center;
+      }
+
+      &__button--play {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        background-color: $light-blue;
+        border-radius: 50%;
+        border: none;
+        color: $white-color;
+        font-size: 40px;
+      }
+
+      &__desc {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: $white-color;
+        text-align: center;
+        width: 400px;
+      }
+    }
+  }
+}
