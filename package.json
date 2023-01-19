@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node-sass -w src/styles/style.scss src/style.css",
-    "compiler": "node-sass src/styles/style.scss src/style.css",
-    "prefixer": "postcss src/style.css --use postcss-import --use autoprefixer --no-map --output src/style.css",
-    "cleaner": "purgecss --css src/style.css --content src/index.html --output src/style.css",
-    "minimizer": "postcss src/style.css --use cssnano --no-map --output src/style.css",
-    "prod": "npm-run-all compiler prefixer cleaner minimizer",
+    "test": "node-sass -w src/styles/style.scss src/css/style.css",
+    "compile": "node-sass src/styles/style.scss src/css/style.min.css",
+    "prefix": "postcss src/css/style.min.css --use autoprefixer --no-map --output src/css/style.min.css",
+    "clean": "purgecss --css src/css/style.min.css --content src/index.html --output src/css/style.min.css",
+    "minimize": "postcss src/css/style.min.css --use cssnano --no-map --output src/css/style.min.css",
+    "prod": "npm-run-all compile prefix clean minimize",
     "lint": "stylelint **/*.scss",
     "lint:fix": "npm run lint -- --fix"
   },

@@ -1,89 +1,89 @@
-@import './kit/variables';
+@import "./kit/variables";
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  .footer-nav {
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 160px;
-    padding: 40px 0px 60px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: $darker-grey;
-
-    &__details {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0 20px;
-      &__contacts {
-        padding: 10px;
-        flex: 1;
+@media screen and (min-width: $mobile-screen-min) and (max-width: $mobile-screen-max) {
+    .footer-nav {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 160px;
+        padding: 40px 0px 60px 0px;
         display: flex;
-        align-items: center;
         flex-direction: column;
-        gap: 20px;
+        justify-content: center;
+        background-color: $darker-grey;
 
-        &__logo {
-          align-self: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 5px;
-
-          &__logo-img {
-            width: 20px;
-            height: 20px;
-          }
-          &__logo-text {
-            font-family: Source Sans Pro;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 16px;
-            color: $white-color;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-          }
-        }
         &__details {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            &__contacts {
+                padding: 10px;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
 
-          &__detail {
-            font-family: Source Sans Pro;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            color: rgba(255, 255, 255, 0.4);
+                &__logo {
+                    align-self: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
 
-            &--email {
-              margin-top: 10px;
+                    &__logo-img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    &__logo-text {
+                        font-family: Source Sans Pro;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 16px;
+                        color: $white-color;
+                        letter-spacing: 0.2em;
+                        text-transform: uppercase;
+                    }
+                }
+                &__details {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
 
-              a {
-                text-decoration: none;
-                color: rgba(255, 255, 255, 0.4);
-              }
+                    &__detail {
+                        font-family: Source Sans Pro;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: rgba(255, 255, 255, 0.4);
+
+                        &--email {
+                            margin-top: 10px;
+
+                            a {
+                                text-decoration: none;
+                                color: rgba(255, 255, 255, 0.4);
+                            }
+                        }
+                    }
+                }
             }
-          }
-        }
-      }
-      &__rights {
-        margin-top: 10px;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+            &__rights {
+                margin-top: 10px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
 
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        color: rgba(255, 255, 255, 0.4);
-      }
+                font-family: "Source Sans Pro";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
     }
-  }
 }

@@ -4,15 +4,18 @@ $lighter-grey-color: rgba(255, 255, 255, 0.7);
 $darker-grey: #464547;
 $grey-color: #666666;
 $light-blue: #55c2d8;
+$mobile-screen-max: 768px;
+$mobile-screen-min: 480px;
+$desktop-screen-min: 1200px;
 // $oswald: Oswald;
 // $source-sans-pro: Source Sans Pro;
 
 @font-face {
-  font-family: 'Oswald';
-  src: url('./assets/fonts/Oswald-VariableFont_wght.ttf');
+    font-family: "Oswald";
+    src: url("../assets/fonts/Oswald-VariableFont_wght.ttf");
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('./assets/fonts/SourceSansPro-Regular.ttf');
+    font-family: "Source Sans Pro";
+    src: url("../assets/fonts/SourceSansPro-Regular.ttf");
 }

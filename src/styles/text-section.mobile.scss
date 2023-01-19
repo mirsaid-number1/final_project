@@ -1,58 +1,59 @@
-@import './kit/variables';
-@import './kit/mixins';
+@import "./kit/variables";
+@import "./kit/mixins";
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  .blocks-wrapper {
-    height: auto;
-    width: 100%;
-    &__section-text {
-      box-sizing: border-box;
-      width: 100%;
-      padding: 0 20px;
-      margin: 50px auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      &__header--text {
-        @include header-style($darker-grey);
-      }
-
-      &__desc--text {
-        @include description-style($grey-color);
-      }
-
-      &__infos {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+@media screen and (min-width: $mobile-screen-min) and (max-width: $mobile-screen-max) {
+    .blocks-wrapper {
+        height: auto;
         width: 100%;
+        &__section-text {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 20px;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-        &__big-texts {
-          display: block;
-          font-family: 'Source Sans Pro';
-          width: auto;
-          height: auto;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 22px;
-          color: $grey-color;
+            &__header--text {
+                @include header-style($darker-grey);
+            }
+
+            &__desc--text {
+                @include description-style($grey-color);
+            }
+
+            &__infos {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+
+                &__big-texts {
+                    display: block;
+                    font-family: "Source Sans Pro";
+                    width: auto;
+                    height: auto;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $grey-color;
+                }
+            }
+            &__button--read-more {
+                font-family: "Oswald";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 0.1em;
+                z-index: 3;
+                @include buttons(15px, 115px, 35px);
+                @include readme-button-animation();
+            }
         }
-      }
-      &__button--read-more {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 0.1em;
-        @include buttons(15px, 115px, 35px);
-        @include readme-button-animation();
-      }
     }
-  }
 }

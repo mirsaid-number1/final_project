@@ -1,38 +1,38 @@
-@import './kit/variables';
-@import './kit/mixins';
+@import "./kit/variables";
+@import "./kit/mixins";
 
-@media screen and (min-width: 1200px) {
-  .blocks-wrapper {
-    height: auto;
-    width: 100%;
+@media screen and (min-width: $desktop-screen-min) {
+    .blocks-wrapper {
+        height: auto;
+        width: 100%;
 
-    &__article-menu {
-      padding-top: 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      width: 100%;
-      background-color: grey;
-      background-image: url('./assets/main-bg-img.jpg');
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-size: cover;
+        &__article-menu {
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            background-color: grey;
+            background-image: url("../assets/main-bg-img.jpg");
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
 
-      &__img {
-        width: 63px;
-        height: 63px;
-        @include logo-animation();
-      }
+            &__img {
+                width: 63px;
+                height: 63px;
+                @include logo-animation();
+            }
 
-      &__header--menu {
-        @include header-style($white-color);
-      }
+            &__header--menu {
+                @include header-style($white-color);
+            }
 
-      &__desc--menu {
-        @include description-style($lighter-grey-color);
-      }
+            &__desc--menu {
+                @include description-style($lighter-grey-color);
+            }
+        }
     }
-  }
 }

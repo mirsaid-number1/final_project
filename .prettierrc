@@ -1,6 +1,11 @@
 {
     "trailingComma": "es5",
-    "tabWidth": 2,
+    "tabWidth": 4,
+    "printWidth": 80,
     "semi": true,
-    "singleQuote": true
+    "singleQuote": false,
+    "svelteStrictMode": false,
+    "svelteBracketNewLine": false,
+    "svelteAllowShorthand": true,
+    "svelteIndentScriptAndStyle": true
 }
